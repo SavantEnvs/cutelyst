@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: multipart
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/multipart/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_multipart
+    libfuzzer: true
+    timeout: 5

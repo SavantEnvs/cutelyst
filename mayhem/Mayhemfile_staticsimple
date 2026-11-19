@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: staticsimple
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/staticsimple/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_staticsimple
+    libfuzzer: true
+    timeout: 5

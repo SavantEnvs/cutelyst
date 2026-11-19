@@ -1,0 +1,6 @@
+Content-Type: multipart/form-data; boundary="a b"
+--a b
+Content-Disposition: form-data; name="x"; filename*=UTF-8''f%C3%A9.txt
+
+data
+--a b--

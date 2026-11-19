@@ -1,0 +1,5 @@
+GET /one/x?a=1&b=%20c&k HTTP/1.1
+Host: localhost
+Cookie: a=b; c=d
+Authorization: Basic dXNlcjpwYXNz
+

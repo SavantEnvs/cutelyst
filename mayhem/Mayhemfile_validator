@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: validator
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/validator/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_validator
+    libfuzzer: true
+    timeout: 5

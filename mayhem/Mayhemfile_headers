@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: headers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/headers/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_headers
+    libfuzzer: true
+    timeout: 5

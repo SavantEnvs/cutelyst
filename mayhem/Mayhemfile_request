@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: request
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/request/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_request
+    libfuzzer: true
+    timeout: 5

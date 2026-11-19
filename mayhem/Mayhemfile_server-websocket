@@ -1,0 +1,9 @@
+project: savantenvs/cutelyst
+target: server-websocket
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/server-websocket/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_server_websocket
+    libfuzzer: true
+    timeout: 10
